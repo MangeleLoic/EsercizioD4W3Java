@@ -22,7 +22,7 @@ public abstract class Evento {
     private String descrizione;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "tipo_evento", nullable = false)
+    @Column(name = "tipo_evento", nullable = true)
     private TipoEvento tipoEvento;
 
     @Column(name = "numero_max_partecipanti", nullable = false)

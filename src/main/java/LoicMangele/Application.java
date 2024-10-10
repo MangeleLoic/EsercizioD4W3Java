@@ -43,6 +43,8 @@ public class Application {
 
         Concerto eminem = new Concerto("Concerto di Eminem", LocalDate.of(2024, 12, 10), "Grande evento di Eminem!", TipoEvento.CONCERTO, 50000, Genere.RAP, true);
         Concerto snoopDogg = new Concerto("Concerto di Snoop Dogg", LocalDate.of(2025, 6, 13), "Mega tour di Snoopy!", TipoEvento.CONCERTO, 40000, Genere.RAP, true);
+        Concerto adele = new Concerto("Concerto di Adele", LocalDate.of(2025, 7, 17), "Tour di Adele!", TipoEvento.CONCERTO, 40000, Genere.POP, true);
+        Concerto metallica = new Concerto("Concerto dei Metallica", LocalDate.of(2024, 11, 13), "Concerto dei Metallica!", TipoEvento.CONCERTO, 40000, Genere.ROCK, true);
         PartitaDiCalcio derby = new PartitaDiCalcio("Derby di Milano", LocalDate.of(2024, 9, 21), "Stracittadina di Milano", TipoEvento.CALCIO, 60000, "Inter", "Milan", "Milan", 1, 2);
         PartitaDiCalcio derby2 = new PartitaDiCalcio("Derby di Roma", LocalDate.of(2024, 11, 11), "Stracittadina di Roma", TipoEvento.CALCIO, 50000, "Roma", "Lazio", null, 2, 2);
         GaraDiAtletica gara1 = new GaraDiAtletica("200 metri", LocalDate.of(2024, 7, 21), "Competizione di velocità", TipoEvento.ATLETICA, 8, atleti, vincitore1);
@@ -61,6 +63,8 @@ public class Application {
 
         ev.save(eminem);
         ev.save(snoopDogg);
+        ev.save(adele);
+        ev.save(metallica);
         ev.save(derby);
         ev.save(derby2);
         ev.save(gara1);

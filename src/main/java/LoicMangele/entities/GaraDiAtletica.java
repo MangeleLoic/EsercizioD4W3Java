@@ -9,7 +9,7 @@ import java.util.List;
 @Table(name = "gara_di_atletica")
 public class GaraDiAtletica extends Evento {
 
-    @OneToMany(mappedBy = "garaDiAtletica", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "garaDiAtletica")
     private List<Persona> atleti;
 
     @ManyToOne
