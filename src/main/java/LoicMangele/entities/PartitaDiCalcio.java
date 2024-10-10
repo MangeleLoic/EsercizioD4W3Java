@@ -24,6 +24,8 @@ public class PartitaDiCalcio extends Evento{
     @Column(name = "numero_goal_ospite")
     private int numeroGoalOspite;
 
+    public PartitaDiCalcio() {}
+
     public PartitaDiCalcio(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipoEvento, int numeroMassimoPartecipanti, String squadraDiCasa, String squadraOspite, String squadraVincente, int numeroGoalCasa, int numeroGoalOspite) {
         super(titolo, dataEvento, descrizione, tipoEvento, numeroMassimoPartecipanti);
         this.squadraDiCasa = squadraDiCasa;
