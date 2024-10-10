@@ -23,7 +23,7 @@ public class Persona {
     private LocalDate dataDiNascita;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column
     private Sesso sesso;
 
     @ManyToOne

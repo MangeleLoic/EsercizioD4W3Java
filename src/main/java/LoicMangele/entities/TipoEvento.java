@@ -1,6 +1,7 @@
 package LoicMangele.entities;
 
 public enum TipoEvento {
-    PRIVATO,
-    PUBBLICO
+    CONCERTO,
+    CALCIO,
+    ATLETICA
 }

@@ -9,19 +9,19 @@ import java.util.List;
 @Table(name = "gara_di_atletica")
 public class GaraDiAtletica extends Evento {
 
-    @OneToMany(mappedBy = "garaDiAtletica")
+    @OneToMany(mappedBy = "garaDiAtletica", cascade = CascadeType.ALL)
     private List<Persona> atleti;
+
     @ManyToOne
     @JoinColumn(name = "vincitore_id")
     private Persona vincitore;
 
-
-
     public GaraDiAtletica() {}
 
-    public GaraDiAtletica(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipoEvento, int numeroMassimoPartecipanti, List<Persona> atleti) {
+    public GaraDiAtletica(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipoEvento, int numeroMassimoPartecipanti, List<Persona> atleti, Persona vincitore) {
         super(titolo, dataEvento, descrizione, tipoEvento, numeroMassimoPartecipanti);
         this.atleti = atleti;
+        this.vincitore = vincitore;
     }
 
     public List<Persona> getAtleti() {
@@ -32,6 +32,13 @@ public class GaraDiAtletica extends Evento {
         this.atleti = atleti;
     }
 
+    public Persona getVincitore() {
+        return vincitore;
+    }
+
+    public void setVincitore(Persona vincitore) {
+        this.vincitore = vincitore;
+    }
 
     @Override
     public String toString() {
@@ -41,8 +48,8 @@ public class GaraDiAtletica extends Evento {
                 ", dataEvento=" + getDataEvento() +
                 ", descrizione='" + getDescrizione() + '\'' +
                 ", numeroMassimoPartecipanti=" + getNumeroMassimoPartecipanti() +
-                ", numeroAtleti=" + atleti.size() +
+                ", numeroAtleti=" + (atleti != null ? atleti.size() : 0) +
+                ", vincitore=" + (vincitore != null ? vincitore.getNome() + " " + vincitore.getCognome() : "Nessun vincitore") +
                 '}';
     }
 }
-

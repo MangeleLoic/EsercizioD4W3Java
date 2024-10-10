@@ -1,6 +1,6 @@
 package LoicMangele.entities;
 
 public enum Sesso {
-    Maschio,
-    Femmina
+    MASCHIO,
+    FEMMINA
 }
